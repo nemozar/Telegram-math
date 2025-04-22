@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица умножения</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #0088cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #006699;
+        }
+        .question {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        input {
+            padding: 10px;
+            font-size: 18px;
+            width: 80px;
+            text-align: center;
+        }
+        .result {
+            font-size: 20px;
+            margin: 10px 0;
+            min-height: 30px;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        .stats {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Изучаем таблицу умножения</h1>
+        
+        <div>
+            <button id="startBtn">Начать тест</button>
+            <button id="practiceBtn">Тренировка</button>
+        </div>
+        
+        <div id="gameArea" style="display: none;">
+            <div class="question" id="question"></div>
+            <input type="number" id="answerInput" placeholder="Ответ">
+            <button id="submitBtn">Проверить</button>
+            <button id="nextBtn" style="display: none;">Следующий вопрос</button>
+            <div class="result" id="result"></div>
+            <div class="stats" id="stats"></div>
+        </div>
+        
+        <div id="modeInfo"></div>
+    </div>
 
+    <script src="app.js"></script>
+</body>
+</html>
